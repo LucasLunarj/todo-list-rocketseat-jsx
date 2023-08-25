@@ -1,0 +1,27 @@
+.container {
+  background-color: var(--gray-700);
+  height: 12.5rem;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  color: white;
+  display: flex;
+  gap: 12px;
+}
+
+.content h1 {
+  font-family: inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  color: var(--blue);
+}
+.content span {
+  color: var(--purple-dark);
+}

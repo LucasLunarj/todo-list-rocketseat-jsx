@@ -1,0 +1,56 @@
+.container {
+  height: 72px;
+  margin-top: 24px;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  width: 100%;
+  gap: 12px;
+}
+
+.content input {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.content p {
+  color: var(--gray-100);
+  font-family: inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400px;
+  line-height: 140%;
+}
+.trashIcon button {
+  border: 1px solid green;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: auto;
+}
+.trashIcon button :hover {
+  background-color: var(--gray-400);
+  cursor: pointer;
+}
+svg {
+  margin-bottom: 1px;
+  width: 24px;
+  height: 24px;
+  color: #808080;
+  cursor: pointer;
+}
+
+svg:hover {
+  color: var(--red-danger);
+  cursor: pointer;
+}
