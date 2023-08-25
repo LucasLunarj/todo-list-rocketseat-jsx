@@ -69,13 +69,9 @@
   background-color: var(--blue);
 }
 
-/* @media (max-width: 700px) {
-  .content {
+@media (max-width: 700px) {
+  .container {
+    padding-right: 5px;
+    padding-left: 5px;
   }
-  .content input {
-  }
-
-  .buttonBox {
-    width: 100vw;
-  }
-} */
+}
