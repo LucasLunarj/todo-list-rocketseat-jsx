@@ -1,14 +1,18 @@
 import styles from "./TasksCreated.module.css";
 
 export function TasksCreated(props) {
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <input type="checkbox" name="" id="" />
-        <p>
-          {props.taskData}
-        </p>
+        <div className={styles.contentBox}>
+          <input type="checkbox" name="" id="" />
+          <p>
+            {props.taskData}
+          </p>
+        </div>
         <svg
+          onClick={() => console.log('clicou!')}
           width="13"
           height="14"
           viewBox="0 0 13 14"

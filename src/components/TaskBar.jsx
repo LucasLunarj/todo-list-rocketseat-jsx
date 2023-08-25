@@ -6,6 +6,10 @@ import plus from "../assets/plus.svg";
 
 export const TaskBar = (props) => {
   const [data, setData] = useState("");
+  function handleDataGenerator() {
+    props.taskGenerator(data)
+    setData("")
+  }
 
   return (
     <div className={styles.container}>
@@ -17,7 +21,7 @@ export const TaskBar = (props) => {
             value={data}
             onChange={(e) => setData(e.target.value)}
           />
-          <button onClick={() => props.taskGenerator(data)} className={styles.buttonBox}>
+          <button disabled={data.length === 0} onClick={handleDataGenerator} className={styles.buttonBox}>
             Criar
             <div>
               <img src={plus} alt="" />

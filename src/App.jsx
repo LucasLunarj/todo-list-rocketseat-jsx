@@ -9,18 +9,15 @@ import { Tasks } from "./components/Tasks";
 import "./App.css";
 
 export function App() {
-  const [list, setList] = useState([
-    {
-      task: "2222"
-      ,
-      checked: false,
-    },
-  ]);
+  const [list, setList] = useState([]);
+  const [getTaskCreatedData, setGetTaskCreatedData] = useState(0)
 
   function listGenerator(dataList) {
-    return setList([...list, { task: dataList, checked: false }]);
+    setList([...list, { task: dataList, checked: false }]);
+    handleCreatedData()
   }
-  console.log(list)
+  const handleCreatedData = () => setGetTaskCreatedData(list.length + 1)
+  console.log(getTaskCreatedData)
   return (
     <div>
       <Header />
@@ -29,7 +26,7 @@ export function App() {
           <TaskBar taskGenerator={listGenerator} />
         </div>
         <div className="tasks">
-          <Tasks listData={list} />
+          <Tasks listData={list} taksCreatedAmount={getTaskCreatedData} />
         </div>
       </div>
     </div>

@@ -5,6 +5,8 @@
 }
 .content {
   height: 100%;
+  word-wrap: break-word;
+  height: 100%;
 }
 .amountBar {
   width: auto;

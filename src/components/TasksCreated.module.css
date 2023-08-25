@@ -1,5 +1,6 @@
 .container {
-  height: 72px;
+  min-height: 72px;
+  height: auto;
   margin-top: 24px;
   background-color: var(--gray-500);
   border-radius: 8px;
@@ -30,6 +31,12 @@
   font-weight: 400px;
   line-height: 140%;
 }
+
+.contentBox {
+  display: flex;
+  gap: 12px;
+}
+
 .trashIcon button {
   border: 1px solid green;
   width: 40px;

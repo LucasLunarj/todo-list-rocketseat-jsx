@@ -4,7 +4,6 @@ import styles from "./Tasks.module.css";
 import { TasksCreated } from "./TasksCreated";
 
 export function Tasks(props) {
-  const [getLength, setGetLenght] = useState(0);
 
 
   return (
@@ -13,7 +12,7 @@ export function Tasks(props) {
         <div className={styles.amountBar}>
           <div className={styles.tasksCreatedAmount}>
             <p>Tarefas criadas</p>
-            <div>{getLength}</div>
+            <div>{props.taksCreatedAmount}</div>
           </div>
           <div className={styles.tasksFinishedAmount}>
             <p>Concluidas</p>
