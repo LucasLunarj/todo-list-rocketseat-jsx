@@ -9,12 +9,12 @@ import { EmptyTasks } from "./EmptyTasks";
 export function Tasks(props) {
 
 
-  const tasks = props.listData.map((item) => {
-    return <TasksCreated key={item.id} taskData={item.task} receiveId={() => handleGetID(item.id)} />
+  const tasks = props.listData.map((item, index) => {
+    return <TasksCreated key={item.id} taskData={item.task} receiveId={() => handleGetID(item.id, index)} />
   })
 
-  function handleGetID(id) {
-    props.idGenerator(id)
+  function handleGetID(id, index) {
+    props.idGenerator(id, index)
 
   }
 
@@ -24,7 +24,7 @@ export function Tasks(props) {
         <div className={styles.amountBar}>
           <div className={styles.tasksCreatedAmount}>
             <p>Tarefas criadas</p>
-            <div>{props.taksCreatedAmount}</div>
+            <div>{props.tasksCreatedAmount}</div>
           </div>
           <div className={styles.tasksFinishedAmount}>
             <p>Concluidas</p>
