@@ -9,26 +9,37 @@ import { EmptyTasks } from "./EmptyTasks";
 export function Tasks(props) {
 
   const [finishedCount, setFinishedCount] = useState(0)
+  const [removedSwitch, setRemovedSwitch] = useState('')
 
-  const tasks = props.listData.map((item, index) => {
+  const tasks = props.listData.map((item) => {
     return <TasksCreated key={item.id} taskData={item.task} receiveId={() => handleGetID(item.id)} tasksFinished={HandleGetFinishedTasksAmount} />
   })
 
 
   function handleGetID(id) {
     props.idGenerator(id)
+    if (removedSwitch === false) {
+      setFinishedCount(finishedCount - 1)
+
+    } else {
+      undefined
+    }
 
   }
-  console.log(props.tasksCreatedAmount)
+
 
   function HandleGetFinishedTasksAmount(finished) {
+
     if (finished === false) {
       setFinishedCount(finishedCount + 1)
+      setRemovedSwitch(finished)
     } else {
       setFinishedCount(finishedCount - 1)
+      setRemovedSwitch(finished)
     }
-  }
 
+  }
+  console.log(removedSwitch)
 
   return (
     <div className={styles.container}>

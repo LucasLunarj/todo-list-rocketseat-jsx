@@ -4,10 +4,12 @@ import { useState } from "react";
 
 import plus from "../assets/plus.svg";
 
-export const TaskBar = (props) => {
+export const TaskBar = ({ taskGenerator }) => {
+
+
   const [data, setData] = useState("");
   function handleDataGenerator() {
-    props.taskGenerator(data)
+    taskGenerator(data)
     setData("")
   }
 

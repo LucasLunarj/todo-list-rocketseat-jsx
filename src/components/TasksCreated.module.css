@@ -1,6 +1,6 @@
 .container {
   min-height: 72px;
-  height: auto;
+  height: 100%;
   margin-top: 24px;
   background-color: var(--gray-500);
   border-radius: 8px;
@@ -16,6 +16,7 @@
   padding: 16px;
   width: 100%;
   gap: 12px;
+  height: 100%;
 }
 
 .uncheckedButton {
@@ -40,6 +41,7 @@
 }
 .checkedStyle {
   text-decoration: line-through;
+  line-break: auto;
   display: flex;
   gap: 12px;
 
@@ -53,12 +55,14 @@
   line-height: 140%;
 }
 .uncheckedStyle {
+  height: 100%;
   color: var(--gray-100);
   font-family: inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+  line-break: auto;
 }
 
 .contentBox {

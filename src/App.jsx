@@ -24,10 +24,11 @@ export function App() {
 
 
 
-  const handleGetId = (id) => {
+  const handleGetId = (id, removeCounter) => {
 
     setList(list.filter((item) => id !== item.id))
     setGetTaskCreatedData(list.length - 1)
+
   }
 
 
