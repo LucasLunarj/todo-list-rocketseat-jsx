@@ -7,9 +7,16 @@ import { TasksCreated } from "./TasksCreated";
 import { EmptyTasks } from "./EmptyTasks";
 
 export function Tasks(props) {
-  const tasks = props.listData.map((item, index) => {
-    return <TasksCreated key={index} taskData={item.task} />
+
+
+  const tasks = props.listData.map((item) => {
+    return <TasksCreated key={item.id} taskData={item.task} receiveId={() => handleGetID(item.id)} />
   })
+
+  function handleGetID(id) {
+    props.idGenerator(id)
+
+  }
 
   return (
     <div className={styles.container}>

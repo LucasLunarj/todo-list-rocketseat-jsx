@@ -12,7 +12,7 @@ export function TasksCreated(props) {
           </p>
         </div>
         <svg
-          onClick={() => console.log('clicou!')}
+          onClick={props.receiveId}
           width="13"
           height="14"
           viewBox="0 0 13 14"
