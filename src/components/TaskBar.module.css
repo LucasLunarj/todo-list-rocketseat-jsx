@@ -33,12 +33,16 @@
   line-height: 140%;
 }
 
+.content input:hover {
+  border: 1px solid var(--purple-dark);
+}
 .content input::placeholder {
   color: var(--gray-300);
 }
 
 .content input[type="text"]:focus {
-  border: none;
+  border: 1px solid var(--purple-dark);
+  outline: none;
 }
 
 .content button {

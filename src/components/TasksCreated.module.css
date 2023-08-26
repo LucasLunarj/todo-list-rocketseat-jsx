@@ -20,24 +20,30 @@
 }
 
 .uncheckedButton {
-  width: 17.455px;
-  height: 17.455px;
+  min-width: 17.455px;
+  min-height: 17.455px;
   cursor: pointer;
   color: var(--blue);
+  transition: 1s;
 }
 
 .uncheckedButton:hover {
   color: var(--blue-dark);
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+  transition: 0.2s;
 }
 
 .checkedButton {
+  min-width: 17.455px;
+  min-height: 17.455px;
   color: var(--purple-dark);
   cursor: pointer;
+  transition: 1s;
 }
 .checkedButton:hover {
   color: var(--purple);
+  transition: 0.2s;
 }
 .checkedStyle {
   text-decoration: line-through;
@@ -63,28 +69,20 @@
   font-weight: 400;
   line-height: 140%;
   line-break: auto;
+  height: 100%;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .contentBox {
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 
-.trashIcon button {
-  border: 1px solid green;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: auto;
-}
-.trashIcon button :hover {
-  background-color: var(--gray-400);
-  cursor: pointer;
-}
 .trashButton {
-  width: 12px;
-  height: 14px;
+  min-width: 12px;
+  min-height: 14px;
   color: #808080;
   cursor: pointer;
 }
