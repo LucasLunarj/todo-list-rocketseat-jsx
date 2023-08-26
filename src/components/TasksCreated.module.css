@@ -38,12 +38,26 @@
 .checkedButton:hover {
   color: var(--purple);
 }
-.content p {
+.checkedStyle {
+  text-decoration: line-through;
+  display: flex;
+  gap: 12px;
+
+  color: var(--gray-300);
+
+  font-family: inter;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 140%;
+}
+.uncheckedStyle {
   color: var(--gray-100);
   font-family: inter;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 140%;
 }
 
@@ -65,9 +79,8 @@
   cursor: pointer;
 }
 .trashButton {
-  margin-bottom: 1px;
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 14px;
   color: #808080;
   cursor: pointer;
 }
