@@ -3,8 +3,10 @@ import styles from "./TasksCreated.module.css";
 
 export function TasksCreated(props) {
   const [switchChange, setSwitchChange] = useState(false);
+
   function handleSwitch() {
     switchChange === false ? setSwitchChange(true) : setSwitchChange(false)
+    props.tasksFinished(switchChange)
   }
 
 
@@ -20,7 +22,7 @@ export function TasksCreated(props) {
 
 
   return (
-    <div style={{ backgroundColor: switchChange === true ? 'var(--gray-500)' : "" }} className={styles.container}>
+    <div style={{ backgroundColor: switchChange === true ? 'var(--gray-400)' : "" }} className={styles.container}>
       <div className={styles.content}>
         <div className={styles.contentBox}>
           {switchChange === false ? unchecked : checked}
