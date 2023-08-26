@@ -18,11 +18,26 @@
   gap: 12px;
 }
 
-.content input {
-  margin-bottom: 15px;
+.uncheckedButton {
+  width: 17.455px;
+  height: 17.455px;
   cursor: pointer;
+  color: var(--blue);
 }
 
+.uncheckedButton:hover {
+  color: var(--blue-dark);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.checkedButton {
+  color: var(--purple-dark);
+  cursor: pointer;
+}
+.checkedButton:hover {
+  color: var(--purple);
+}
 .content p {
   color: var(--gray-100);
   font-family: inter;
@@ -49,7 +64,7 @@
   background-color: var(--gray-400);
   cursor: pointer;
 }
-svg {
+.trashButton {
   margin-bottom: 1px;
   width: 24px;
   height: 24px;
@@ -57,7 +72,7 @@ svg {
   cursor: pointer;
 }
 
-svg:hover {
+.trashButton:hover {
   color: var(--red-danger);
   cursor: pointer;
 }

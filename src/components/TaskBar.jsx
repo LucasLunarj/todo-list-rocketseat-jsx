@@ -11,6 +11,16 @@ export const TaskBar = (props) => {
     setData("")
   }
 
+  function handleEnterkey(e) {
+    let key = e.keyCode
+    if (key === 13 && data.length > 0) {
+      handleDataGenerator()
+    }
+    else {
+      undefined
+    }
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -20,6 +30,8 @@ export const TaskBar = (props) => {
             placeholder="Adicione uma nova tarefa"
             value={data}
             onChange={(e) => setData(e.target.value)}
+            onKeyDown={handleEnterkey}
+
           />
           <button disabled={data.length === 0} onClick={handleDataGenerator} className={styles.buttonBox}>
             Criar
