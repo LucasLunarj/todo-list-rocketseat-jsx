@@ -14,7 +14,7 @@ export function App() {
 
 
   function listGenerator(dataList) {
-    setList([...list, { task: dataList, checked: false, id: uuidv4() }]);
+    setList([...list, { task: dataList, id: uuidv4() }]);
     handleCreatedData()
   }
   console.log(list)
@@ -35,7 +35,9 @@ export function App() {
 
   return (
     <div>
-      <Header />
+      <header>
+        <Header />
+      </header>
       <div className="container">
         <div className="taskbar">
           <TaskBar taskGenerator={listGenerator} />

@@ -50,8 +50,8 @@ export function Tasks(props) {
             <div>{props.tasksCreatedAmount}</div>
           </div>
           <div className={styles.tasksFinishedAmount}>
-            <p>Concluidas</p>
-            <div>{finishedCount}</div>
+            <p>Concluídas</p>
+            <div>{finishedCount === 0 ? finishedCount : `${finishedCount} de ${props.tasksCreatedAmount}`}</div>
           </div>
         </div>
       </div>
